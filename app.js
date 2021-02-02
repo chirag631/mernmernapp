@@ -39,11 +39,7 @@ app.use('/api/v1',test);
 
 app.use('/users', usersRouter);
 app.use('/testapi',testapirouter);
-app.get('*',(req,res)=>{
-  res.status(200).json({
-    msg:'Catch All'
-  });
-});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
